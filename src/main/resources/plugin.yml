@@ -1,0 +1,5 @@
+name: ShaderEventUtil
+version: '${version}'
+main: com.spectrasonic.ShaderEventUtil.Main
+api-version: '1.21.1'
+authors: [Spectrasonic]
