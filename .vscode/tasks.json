@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "gradle",
+            "id": "/Users/spectra/Desktop/ShaderEventUtilbuildShaderEventUtil",
+            "script": "build",
+            "description": "Assembles and tests this project.",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "project": "ShaderEventUtil",
+            "buildFile": "/Users/spectra/Desktop/ShaderEventUtil/build.gradle",
+            "rootProject": "ShaderEventUtil",
+            "projectFolder": "/Users/spectra/Desktop/ShaderEventUtil",
+            "workspaceFolder": "/Users/spectra/Desktop/ShaderEventUtil",
+            "args": "",
+            "javaDebug": false,
+            "problemMatcher": [
+                "$gradle"
+            ],
+            "label": "gradle: build"
+        }
+    ]
+}

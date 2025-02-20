@@ -1,5 +1,12 @@
 name: ShaderEventUtil
-version: '${version}'
+version: "${version}"
 main: com.spectrasonic.ShaderEventUtil.Main
-api-version: '1.21.1'
+api-version: "1.21"
 authors: [Spectrasonic]
+commands:
+    shaderutil:
+        permission: shadereventutil.shader
+permissions:
+    shadereventutil.shader:
+        description: Allows the user to use the /shader command.
+        default: op

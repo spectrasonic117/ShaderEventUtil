@@ -1,6 +1,6 @@
 plugins {
-    id("io.papermc.paperweight.userdev") version "2.0.0-beta.14"
-    id "com.gradleup.shadow" version "9.0.0-beta8"
+    // id("io.papermc.paperweight.userdev") version "2.0.0-beta.14"
+    // id "com.gradleup.shadow" version "9.0.0-beta8"
     id "java"
 }
 
@@ -8,6 +8,7 @@ group = "com.spectrasonic"
 version = "1.0.0"
 
 repositories {
+    // repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     gradlePluginPortal()
     mavenCentral()
     maven {
@@ -18,17 +19,21 @@ repositories {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
-    maven {
-        name = "aikar"
-        url = "https://repo.aikar.co/content/groups/aikar/"
-    }
+    // maven {
+    //     name = "aikar"
+    //     url = "https://repo.aikar.co/content/groups/aikar/"
+    // }
+    // maven { 
+    //     name = 'jitpack'
+    //     url = 'https://jitpack.io' 
+    //     }
 }
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT") // Paper
 
-    // ACF Aikar
-    implementation "co.aikar:acf-paper:0.5.1-SNAPSHOT"
+    // // ACF Aikar
+    // implementation "co.aikar:acf-paper:0.5.1-SNAPSHOT"
 
     // Lombok
     compileOnly "org.projectlombok:lombok:1.18.36"
@@ -42,15 +47,18 @@ dependencies {
     // implementation "net.kyori:adventure-text-serializer-legacy:4.19.0" // Legacy
 
     // Paperweight
-    paperweight.paperDevBundle("1.21.1-R0.1-SNAPSHOT")
+    // paperweight.paperDevBundle("1.21.1-R0.1-SNAPSHOT")
+
+    // TaskChain
+    // implementation 'com.github.aikar:TaskChain:3.7.2'
 }
 
-shadowJar {
-    relocate "co.aikar.commands", "com.spectrasonic.ShaderEventUtil.acf"
-    relocate "co.aikar.locales", "com.spectrasonic.ShaderEventUtil.locales"
-}
+// shadowJar {
+//     relocate "co.aikar.commands", "com.spectrasonic.ShaderEventUtil.acf"
+//     relocate "co.aikar.locales", "com.spectrasonic.ShaderEventUtil.locales"
+// }
 
-build.dependsOn shadowJar
+// build.dependsOn shadowJar
 
 def targetJavaVersion = "21"
 java {
